@@ -2,7 +2,6 @@
 # ========== aliases ==========
 alias vi='/usr/bin/vim.tiny'
 alias vim='/usr/bin/vim.tiny'
-alias nvim="$HOME/AppImage/nvim.appimage"
 alias btop='btop --utf-force'
 alias lst='tree -L 1'
 
@@ -29,5 +28,5 @@ bind "set show-all-if-ambiguous on"
 bind "set menu-complete-display-prefix on"
 
 # ========== PATH ===========
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH:$HOME/AppImage"
 export CDPATH=".:$HOME"
