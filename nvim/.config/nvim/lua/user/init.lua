@@ -4,10 +4,6 @@
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
---
--- TODO:
--- A. Check if git diff is enough to remove :me: tags
--- A. Remove all :me: tags
 
 local config = {
   -- Configure AstroNvim updates
@@ -30,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "tokyonight-day",
+  colorscheme = "tokyonight-night",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -55,9 +51,12 @@ local config = {
       -- :me: Additional set {opt}
       confirm = true,
       cmdheight = 1,
-      -- :me: indent default settings
-      -- foldmethod = "expr",
-      -- foldexpr = "nvim_treesitter#foldexpr()",
+    },
+    wo = {
+      foldenable = false,
+      foldlevel = 99,
+      foldmethod = "expr",
+      foldexpr = "nvim_treesitter#foldexpr()",
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -154,7 +153,7 @@ local config = {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -273,7 +272,7 @@ local config = {
           }
         end,
       },
-      ["<leader>sb"] = { require("telescope.builtin").current_buffer_fuzzy_find, desc = "Search buffer" },
+      ["<leader>bs"] = { function () require("telescope.builtin").current_buffer_fuzzy_find { cache_picker = false } end, desc = "Search buffer" },
       -- :me: ui pannel customize!
       ["<leader>uw"] = {
         function()
@@ -538,7 +537,7 @@ local config = {
       return config -- return final config table
     end,
     treesitter = { -- overrides `require("treesitter").setup(...)`
-      -- ensure_installed = { "lua" },
+      ensure_installed = { "lua", "python",  "markdown", "help", "bash"},
     },
     -- use mason-lspconfig to configure LSP installations
     ["mason-lspconfig"] = { -- overrides `require("mason-lspconfig").setup(...)`
@@ -597,6 +596,8 @@ local config = {
   polish = function()
     -- :me: leap configs
     vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
+    -- :me: update fold when entering buffer
+    vim.api.nvim_create_autocmd({ "BufEnter" }, { command = "norm zx", desc = "test" })
 
     -- vim.api.nvim_create_autocmd({ "TermOpen", "BufWinEnter" }, {
     --   pattern = { "*" },
