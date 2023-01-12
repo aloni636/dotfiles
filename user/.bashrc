@@ -3,6 +3,12 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Always add AppImage to PATH
+export PATH="$HOME/.local/bin:$PATH:$HOME/AppImage"
+
+# Always add ~ to CDPATH for easier cd navigation
+export CDPATH=".:$HOME"
+
 # If not running interactively, don't do anything
 case $- in
 *i*) ;;

@@ -15,7 +15,3 @@ venv() {
 alias ffmpeg="ffmpeg -hide_banner"
 alias ffprobe="ffprobe -hide_banner"
 alias ffplay="ffplay -hide_banner"
-
-# ========== PATH ===========
-export PATH="$HOME/.local/bin:$PATH:$HOME/AppImage"
-export CDPATH=".:$HOME"
