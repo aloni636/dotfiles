@@ -287,7 +287,7 @@ local config = {
         end,
         desc = "Toggle wrap",
       },
-
+      ["<leader>uI"] = {"<cmd>IndentBlanklineToggle<cr>", desc = "Toggle indent lines"},
       -- ["<leader>ud"] = {
       --   function()
       --
@@ -597,12 +597,15 @@ local config = {
     -- :me: leap configs
     vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
     -- :me: update fold when entering buffer
-    vim.api.nvim_create_autocmd({ "BufEnter" }, { command = "norm zx", desc = "test" })
+    vim.api.nvim_create_autocmd({ "BufEnter" }, { command = "norm zx", desc = "Restart treesitter folding" })
 
-    -- vim.api.nvim_create_autocmd({ "TermOpen", "BufWinEnter" }, {
-    --   pattern = { "*" },
-    --   callback = vim.cmd "startinsert",
-    -- })
+    -- vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter" },
+    --   { pattern = { "term://*", }, command = "startinsert", desc = "Terminal auto insert" })
+
+    vim.api.nvim_create_autocmd({"TermOpen" ,"BufWinEnter"}, {
+      pattern = {"term://*"},
+      command = "normal! i",
+    })
 
     -- vim.api.cmd "filetype indent off"
     -- vim.cmd "autocmd BufReadPost,FileReadPost * normal zR"
