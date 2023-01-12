@@ -1,0 +1,7 @@
+[user]
+	email = elyasaf123456789@gmail.com
+	name = Elwex123
+[init]
+	defaultBranch = main
+[advice]
+	detachedHead = false
