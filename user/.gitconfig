@@ -1,9 +1,13 @@
 [user]
 	email = elyasaf123456789@gmail.com
-	name = Elwex123
+	name = aloni636
 [init]
 	defaultBranch = main
 [advice]
 	detachedHead = false
 [core]
-	editor = vim
+	editor = nano
+[safe]
+	directory = /mnt/5698F89F98F87F35/Users/User/Desktop/Programming/Learn/Lua
+[alias]
+	graph = log --graph
