@@ -3,6 +3,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export PROMPT_DIRTRIM=1
 # Always add AppImage to PATH
 export PATH="$HOME/.local/bin:$PATH:$HOME/AppImage"
 

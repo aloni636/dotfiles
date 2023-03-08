@@ -1,7 +1,7 @@
 #!/bin/bash
 # ========== aliases ==========
-alias vi='/usr/bin/vim.tiny'
-alias vim='/usr/bin/vim.tiny'
+# alias vi='/usr/bin/vim.tiny'
+# alias vim='/usr/bin/vim.tiny'
 alias btop='btop --utf-force'
 alias lst='tree -L 1'
 
