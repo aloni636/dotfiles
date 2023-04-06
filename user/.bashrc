@@ -3,23 +3,26 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# MY CUSTOM CONFIG
+# ================
+# don't display full path in prompt
 export PROMPT_DIRTRIM=1
-# Always add AppImage to PATH
-export PATH="$HOME/.local/bin:$PATH:$HOME/AppImage"
-
-# Always add ~ to CDPATH for easier cd navigation
+# always add appimages to PATH
+export PATH="$HOME/.local/bin:$PATH:$HOME/appimages"
+# always add ~ to CDPATH for easier cd navigation
 export CDPATH=".:$HOME"
-
-# Always enable tab completion cycling
+# always enable tab completion cycling
 # credits: https://stackoverflow.com/questions/7179642/how-can-i-make-bash-tab-completion-behave-like-vim-tab-completion-and-cycle-thro
 # If there are multiple matches for completion, Tab should cycle through them
 bind 'TAB:menu-complete'
 # Display a list of the matching files
-bind "set show-all-if-ambiguous on"
-# Perform partial (common) completion on the first Tab press, only start
+bind 'set show-all-if-ambiguous on'
+# perform partial (common) completion on the first Tab press, only start
 # cycling full results on the second Tab press (from bash version 5)
-bind "set menu-complete-display-prefix on"
+bind 'set menu-complete-display-prefix on'
 
+# DEFAULT UBUNTU SHELL CONFIG
+# ===========================
 # If not running interactively, don't do anything
 case $- in
 *i*) ;;

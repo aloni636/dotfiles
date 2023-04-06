@@ -6,7 +6,9 @@
 [advice]
 	detachedHead = false
 [core]
-	editor = nano
+	editor = nvim
+[sequence]
+    editor = nvim
 [safe]
 	directory = /mnt/5698F89F98F87F35/Users/User/Desktop/Programming/Learn/Lua
 [alias]
