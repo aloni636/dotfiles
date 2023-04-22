@@ -12,7 +12,7 @@
 [safe]
 	directory = /mnt/5698F89F98F87F35/Users/User/Desktop/Programming/Learn/Lua
 [alias]
-	graph = log --graph
+	graph = log --graph --all
 [merge]
 	tool = nvimdiff
 [mergetool]
