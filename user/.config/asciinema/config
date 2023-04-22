@@ -1,0 +1,4 @@
+[record]
+
+; Command to record, default: $SHELL
+command = /bin/bash --rcfile $HOME/.config/asciinema/rcfile.sh
