@@ -4,12 +4,12 @@
 # alias vim='/usr/bin/vim.tiny'
 alias btop='btop --utf-force'
 alias lst='tree -L 1'
+alias ..="cd .."
 
 # easily activate python venvs
 venv() {
 	source "$1/bin/activate"
 }
-
 # completion for venv command
 # list all venvs inside VENVS_DIR if user didn't wrote anything yet 
 # else, complete directories

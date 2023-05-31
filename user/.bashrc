@@ -7,19 +7,16 @@
 # ================
 # don't display full path in prompt
 export PROMPT_DIRTRIM=1
+
 # always add appimages to PATH
 export PATH="$HOME/.local/bin:$PATH:$HOME/appimages"
+
 # always add ~ to CDPATH for easier cd navigation
 export CDPATH=".:$HOME"
-# always enable tab completion cycling
-# credits: https://stackoverflow.com/questions/7179642/how-can-i-make-bash-tab-completion-behave-like-vim-tab-completion-and-cycle-thro
-# If there are multiple matches for completion, Tab should cycle through them
-bind 'TAB:menu-complete'
-# Display a list of the matching files
-bind 'set show-all-if-ambiguous on'
-# perform partial (common) completion on the first Tab press, only start
-# cycling full results on the second Tab press (from bash version 5)
-bind 'set menu-complete-display-prefix on'
+
+# force crontab -3 and other programs to use nvim as editor
+export VISUAL=nvim
+export EDITOR=nvim
 
 # DEFAULT UBUNTU SHELL CONFIG
 # ===========================
