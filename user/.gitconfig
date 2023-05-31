@@ -1,5 +1,5 @@
 [user]
-	email = elyasaf123456789@gmail.com
+	email = elyasaf.aloni@gmail.com
 	name = aloni636
 [init]
 	defaultBranch = main
@@ -13,6 +13,8 @@
 	directory = /mnt/5698F89F98F87F35/Users/User/Desktop/Programming/Learn/Lua
 [alias]
 	graph = log --graph --all
+	s = status
+	g = log --graph --all
 [merge]
 	tool = nvimdiff
 [mergetool]
