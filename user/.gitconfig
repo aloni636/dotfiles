@@ -15,6 +15,7 @@
 	graph = log --graph --all
 	s = status
 	g = log --graph --all
+	c = checkout
 [merge]
 	tool = nvimdiff
 [mergetool]

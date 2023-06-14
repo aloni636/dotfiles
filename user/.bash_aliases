@@ -3,8 +3,10 @@
 # alias vi='/usr/bin/vim.tiny'
 # alias vim='/usr/bin/vim.tiny'
 alias btop='btop --utf-force'
-alias lst='tree -L 1'
+alias lst='ls -t'
+alias llt='ls -lt'
 alias ..="cd .."
+alias s='source'
 
 # easily activate python venvs
 venv() {
