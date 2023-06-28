@@ -16,6 +16,7 @@
 	s = status
 	g = log --graph --all
 	c = checkout
+	squash = "!f() { git add $@ && git diff --staged --quiet || git commit --amend --no-edit; }; f"
 [merge]
 	tool = nvimdiff
 [mergetool]
