@@ -28,3 +28,5 @@
 	tool = nvimdiff
 [mergetool]
 	keepBackup = false
+[log]
+	date = iso8601
