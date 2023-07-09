@@ -18,8 +18,9 @@
 	c = checkout
 	; read more about how git advanced completion works and can be utilized by users: 
 	; https://github.com/git/git/blob/061c58647eb4b3f0e2c898333577d4b2af115b1d/contrib/completion/git-completion.bash#L26
+	; run git add only if user provided some arguments or if stage is empty (to display that nothing gonna get squashed)
 	squash = "!f() { : git add ; \
-		git diff --staged --quiet && git add $@; \
+		[ $# -gt 0 ] || git diff --staged --quiet && git add $@; \
 		git diff --staged --quiet || git commit --amend --no-edit; \
 		}; f"  
 	reword = commit --amend
