@@ -6,6 +6,7 @@ alias btop='btop --utf-force'
 alias lst='ls -t'
 alias llt='ls -lt'
 alias ..="cd .."
+alias cls="clear"
 alias s='source'
 # ignore .git even when viewing hidden files
 alias tree='tree -I .git'
